@@ -4,6 +4,7 @@ import { Box } from '@chakra-ui/react';
 
 import styled from '@emotion/styled';
 
+import Footer from 'components/modules/Footer';
 import Header from 'components/modules/Header';
 
 import HomePage from 'containers/HomePage/index.js';
@@ -25,9 +26,12 @@ function App() {
   return (
     <Wrapper>
       <Header></Header>
-      <ISOContainer>
+
+      <ISOContainer as="main">
         <HomePage></HomePage>
       </ISOContainer>
+
+      <Footer></Footer>
     </Wrapper>
   );
 }
