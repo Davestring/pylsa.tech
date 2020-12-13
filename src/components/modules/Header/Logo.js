@@ -3,14 +3,12 @@ import PropTypes from 'prop-types';
 
 import { Link, Image } from '@chakra-ui/react';
 
+import PylsaLogo from 'assets/images/pylsa-logo.png';
+
 function Logo({ size }) {
   return (
     <Link>
-      <Image
-        src="https://fakeimg.pl/160x40/"
-        alt="marvel-logo"
-        {...size}
-      ></Image>
+      <Image alt="pylsa-logo" src={PylsaLogo} {...size}></Image>
     </Link>
   );
 }
