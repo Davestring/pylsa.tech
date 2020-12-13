@@ -11,7 +11,7 @@ function Header({ items, ...rest }) {
   return (
     <Box
       as="header"
-      bg="base"
+      bg="white"
       boxShadow="md"
       position="fixed"
       width="100%"
