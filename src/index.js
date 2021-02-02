@@ -8,6 +8,8 @@ import App from 'containers/App';
 
 import theme from 'styles/theme';
 
+import 'i18n';
+
 const robotoFontObserver = new FontFaceObserver('Roboto', {});
 const MOUNT_NODE = document.getElementById('root');
 
