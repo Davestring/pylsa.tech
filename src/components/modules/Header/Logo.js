@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { Link, Image } from '@chakra-ui/react';
 
-import PylsaLogo from 'assets/images/pylsa-logo.png';
+import PylsaLogo from 'images/pylsa-logo.png';
 
 function Logo({ size }) {
   return (
