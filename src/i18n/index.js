@@ -7,10 +7,12 @@ import Backend from 'i18next-http-backend';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
 import homepage_es from 'i18n/locales/es/homepage.json';
+import footer_es from 'i18n/locales/es/footer.json';
 
 const translationsJson = {
   es: {
     homepage: homepage_es,
+    footer: footer_es,
   },
 };
 
