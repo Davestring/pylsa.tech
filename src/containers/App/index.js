@@ -7,7 +7,7 @@ import styled from '@emotion/styled';
 import Footer from 'components/modules/Footer';
 import Header from 'components/modules/Header';
 
-import HomePage from 'containers/HomePage/index.js';
+import RouteTree from './RouteTree';
 
 const Wrapper = styled(Box)`
   background-color: ${({ theme }) => theme.colors.white};
@@ -28,7 +28,7 @@ function App() {
       <Header></Header>
 
       <ISOContainer as="main">
-        <HomePage></HomePage>
+        <RouteTree></RouteTree>
       </ISOContainer>
 
       <Footer></Footer>
