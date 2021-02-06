@@ -1,0 +1,14 @@
+{
+  "title": "pylsa",
+  "subtitle": "sistemas electrónicos de seguridad y confort",
+  "products": {
+    "title": "nuestros productos",
+    "subtitle": "Estamos convencidos que nuestros precios son muy competitivos y que nuestros equipos son de primera calidad.",
+    "cctv": "Video Vigilancia y/o CCTV",
+    "accessControl": "Control de Acceso",
+    "firePrev": "Sistemas de Detección Temprana Contra Incendio",
+    "intrusion": "Automatización e Intrusión",
+    "switches": "Conmutadores Telefónicos",
+    "networks": "Redes"
+  }
+}
