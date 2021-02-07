@@ -12,6 +12,7 @@ import fireprev_es from 'i18n/locales/es/fire-prev-page.json';
 import footer_es from 'i18n/locales/es/footer.json';
 import homepage_es from 'i18n/locales/es/home-page.json';
 import ips_es from 'i18n/locales/es/ips-page.json';
+import navigation_es from 'i18n/locales/es/navigation.json';
 import networks_es from 'i18n/locales/es/networks-page.json';
 import rtc_es from 'i18n/locales/es/rtc-page.json';
 
@@ -23,6 +24,7 @@ const translationsJson = {
     homepage: homepage_es,
     fireprev: fireprev_es,
     ips: ips_es,
+    navigation: navigation_es,
     networks: networks_es,
     rtc: rtc_es,
   },
