@@ -13,6 +13,7 @@ const Wrapper = styled(Box)`
   background-color: ${({ theme }) => theme.colors.white};
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   min-height: 100vh;
 `;
 

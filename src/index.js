@@ -1,8 +1,8 @@
+import FontFaceObserver from 'fontfaceobserver';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import FontFaceObserver from 'fontfaceobserver';
 
-import { ChakraProvider, CSSReset } from '@chakra-ui/react';
+import { CSSReset, ChakraProvider } from '@chakra-ui/react';
 import { ConnectedRouter } from 'connected-react-router';
 import { Provider } from 'react-redux';
 
