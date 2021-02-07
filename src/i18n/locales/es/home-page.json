@@ -8,11 +8,29 @@
   "products": {
     "title": "nuestros productos",
     "subtitle": "Estamos convencidos que nuestros precios son muy competitivos y que nuestros equipos son de primera calidad.",
-    "cctv": "Video Vigilancia y/o CCTV",
-    "accessControl": "Control de Acceso",
-    "firePrev": "Sistemas de Detección Temprana Contra Incendio",
-    "intrusion": "Automatización e Intrusión",
-    "switches": "Conmutadores Telefónicos",
-    "networks": "Redes"
+    "cctv": {
+      "title": "Video Vigilancia y/o CCTV",
+      "summary": "Cámaras análogas, cámaras IP, cámaras PTZ, grabadores digitales, grabadores IP, video análisis, monitores, interfonos y video porteros."
+    },
+    "accessControl": {
+      "title": "Control de Acceso",
+      "summary": "Barreras vehiculares, control, acceso sin contacto, biométricos, cerraduras, torniquetes y puertas de cortesía, paneles de control de acceso, identificación y credencialización."
+    },
+    "firePrev": {
+      "title": "Sistemas de Detección Contra Incendio",
+      "summary": "Detectores de humo, detectores de temperatura, detectores tipo beam, detectores de monóxido de carbono, estaciones manuales, paneles de incendio (convencional y direccionables)."
+    },
+    "intrusion": {
+      "title": "Automatización e Intrusión",
+      "summary": "Cercas eléctricas, cerraduras magnéticas, cercos perimetrales, sensores de movimiento, alarmas residenciales y vecinales."
+    },
+    "switches": {
+      "title": "Conmutadores Telefónicos",
+      "summary": "Correos de voz para cada extensión, menús de opciones, notificaciones de correo, desvió de llamadas, tarificación, restricciones, perifoneo, control de frentes de calle o chapas eléctricas."
+    },
+    "networks": {
+      "title": "Redes",
+      "summary": "Almacenamiento y servidores, redes Wifi, enlaces PTP y PTMP, cables, networking, racks y gabinetes."
+    }
   }
 }
