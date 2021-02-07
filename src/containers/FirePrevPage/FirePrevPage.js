@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 
 import { Box, Heading, Text } from '@chakra-ui/react';
 
-import { useTranslation } from 'react-i18next';
+import { Trans, useTranslation } from 'react-i18next';
 
 import Container from 'components/elements/Container';
 
@@ -30,9 +30,9 @@ function FirePrevPage() {
           </Heading>
         </Container>
         <Container as="section">
-          <Text fontSize="lg" textAlign="justify">
-            {t('description')}
-          </Text>
+          <Trans i18nKey="fireprev:description">
+            <Text fontSize="lg" textAlign="justify"></Text>
+          </Trans>
         </Container>
       </Box>
     </>
