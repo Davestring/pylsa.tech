@@ -8,6 +8,7 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 
 import accessControl_es from 'i18n/locales/es/access-control-page.json';
 import cctv_es from 'i18n/locales/es/cctv-page.json';
+import contact_es from 'i18n/locales/es/contact-page.json';
 import fireprev_es from 'i18n/locales/es/fire-prev-page.json';
 import footer_es from 'i18n/locales/es/footer.json';
 import homepage_es from 'i18n/locales/es/home-page.json';
@@ -20,6 +21,7 @@ const translationsJson = {
   es: {
     accessControl: accessControl_es,
     cctv: cctv_es,
+    contact: contact_es,
     footer: footer_es,
     homepage: homepage_es,
     fireprev: fireprev_es,
