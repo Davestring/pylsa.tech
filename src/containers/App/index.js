@@ -15,6 +15,10 @@ const Wrapper = styled(Box)`
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
+
+  a {
+    text-decoration: none !important;
+  }
 `;
 
 const ISOContainer = styled(Box)`

@@ -3,27 +3,32 @@ import React from 'react';
 
 import { Link as ReachLink } from 'react-router-dom';
 
-import { Image, Link } from '@chakra-ui/react';
+import { Image, Link, useBreakpointValue } from '@chakra-ui/react';
 
 import PylsaLogo from 'images/pylsa-logo.png';
+import PylsaLogoSmall from 'images/pylsa-logo-small.png';
 
-function Logo({ size }) {
+function Logo({ width }) {
+  const logo = useBreakpointValue({ base: PylsaLogoSmall, lg: PylsaLogo });
   return (
     <Link as={ReachLink} to="/">
-      <Image alt="pylsa-logo" src={PylsaLogo} {...size}></Image>
+      <Image alt="pylsa-logo" src={logo} w={width}></Image>
     </Link>
   );
 }
 
 Logo.defaultProps = {
-  size: { width: 160 },
+  width: { base: 55, lg: 160 },
 };
 
 Logo.propTypes = {
-  size: PropTypes.shape({
-    height: PropTypes.number,
-    width: PropTypes.number,
-  }),
+  width: PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.shape({
+      base: PropTypes.number,
+      lg: PropTypes.number,
+    }),
+  ]),
 };
 
 export default Logo;

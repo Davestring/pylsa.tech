@@ -41,6 +41,9 @@ i18n
       escapeValue: true,
     },
     resources: translationsJson,
+    react: {
+      transKeepBasicHtmlNodesFor: ['br'],
+    },
   });
 
 export default i18n;
