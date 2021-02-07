@@ -2,7 +2,7 @@ import Card from 'components/elements/Card';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import { Icon, Link, SimpleGrid, Stack, Text } from '@chakra-ui/react';
+import { Box, Icon, Link, SimpleGrid, Stack, Text } from '@chakra-ui/react';
 import { Link as ReachLink } from 'react-router-dom';
 
 import { useTranslation } from 'react-i18next';
@@ -16,9 +16,14 @@ function ProductsList({ products, ...rest }) {
           <Card p={4}>
             <Stack align="center" justify="space-evenly" h="100%">
               <Icon as={item.icon} h={14} w={14}></Icon>
-              <Text fontWeight="bold" textAlign="center">
-                {t(item.i18nKey)}
-              </Text>
+              <Box>
+                <Text fontWeight="bold" textAlign="center" mb={0}>
+                  {t(`${item.i18nKey}.title`)}
+                </Text>
+                <Text fontSize="xs" textAlign="center">
+                  {t(`${item.i18nKey}.summary`)}
+                </Text>
+              </Box>
             </Stack>
           </Card>
         </Link>
