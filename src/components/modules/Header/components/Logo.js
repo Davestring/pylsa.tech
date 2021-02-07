@@ -1,8 +1,9 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 
-import { Link, Image } from '@chakra-ui/react';
 import { Link as ReachLink } from 'react-router-dom';
+
+import { Image, Link } from '@chakra-ui/react';
 
 import PylsaLogo from 'images/pylsa-logo.png';
 

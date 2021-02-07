@@ -1,11 +1,11 @@
-import React from 'react';
+import Card from 'components/elements/Card';
 import PropTypes from 'prop-types';
+import React from 'react';
 
-import { Icon, Link, Stack, SimpleGrid, Text } from '@chakra-ui/react';
+import { Icon, Link, SimpleGrid, Stack, Text } from '@chakra-ui/react';
 import { Link as ReachLink } from 'react-router-dom';
 
 import { useTranslation } from 'react-i18next';
-import Card from 'components/elements/Card';
 
 function ProductsList({ products, ...rest }) {
   const { t } = useTranslation('homepage');

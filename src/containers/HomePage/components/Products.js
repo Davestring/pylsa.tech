@@ -1,10 +1,10 @@
 import React from 'react';
 
 import { Box, Text } from '@chakra-ui/react';
+import { GiFireShield, GiSecurityGate } from 'react-icons/gi';
 
 import { AiOutlinePhone } from 'react-icons/ai';
 import { BsCameraVideo } from 'react-icons/bs';
-import { GiFireShield, GiSecurityGate } from 'react-icons/gi';
 import { GrSecure } from 'react-icons/gr';
 import { IoGitNetworkOutline } from 'react-icons/io5';
 

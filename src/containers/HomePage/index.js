@@ -2,8 +2,8 @@ import React from 'react';
 
 import { Box } from '@chakra-ui/react';
 
-import Spotlight from 'containers/HomePage/components/Spotlight';
 import Products from 'containers/HomePage/components/Products';
+import Spotlight from 'containers/HomePage/components/Spotlight';
 
 function HomePage() {
   return (
