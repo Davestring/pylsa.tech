@@ -8,20 +8,27 @@ import { Image, Link, useBreakpointValue } from '@chakra-ui/react';
 import PylsaLogo from 'images/pylsa-logo.png';
 import PylsaLogoSmall from 'images/pylsa-logo-small.png';
 
-function Logo({ width }) {
+function Logo({ setSelected, width }) {
   const logo = useBreakpointValue({ base: PylsaLogoSmall, lg: PylsaLogo });
   return (
-    <Link as={ReachLink} to="/">
+    <Link
+      as={ReachLink}
+      to="/"
+      onClick={() => setSelected(null)}
+      _focus={{ outline: 'none' }}
+    >
       <Image alt="pylsa-logo" src={logo} w={width}></Image>
     </Link>
   );
 }
 
 Logo.defaultProps = {
-  width: { base: 55, lg: 160 },
+  setSelected: () => {},
+  width: { base: 55, lg: 120 },
 };
 
 Logo.propTypes = {
+  setSelected: PropTypes.func,
   width: PropTypes.oneOfType([
     PropTypes.number,
     PropTypes.shape({
