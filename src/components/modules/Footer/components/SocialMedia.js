@@ -1,14 +1,16 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import { Icon, Link, Stack } from '@chakra-ui/react';
+import { Box, Icon, Link, Stack } from '@chakra-ui/react';
 
 function SocialMedia({ smItems, iconProps, ...rest }) {
   return (
     <Stack isInline {...rest}>
       {smItems.map((item) => (
         <Link key={`social-media-${item.name}`} href={item.link} isExternal>
-          <Icon as={item.icon} {...iconProps}></Icon>
+          <Box border="2px" borderColor="base" p={2} rounded="full">
+            <Icon as={item.icon} {...iconProps}></Icon>
+          </Box>
         </Link>
       ))}
     </Stack>

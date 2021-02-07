@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Box, Stack, Text } from '@chakra-ui/react';
-import { FaLinkedin, FaTwitterSquare, FaFacebookSquare } from 'react-icons/fa';
+import { FaFacebookSquare, FaLinkedin, FaTwitterSquare } from 'react-icons/fa';
 import { FiInstagram } from 'react-icons/fi';
 
 import { useTranslation } from 'react-i18next';
