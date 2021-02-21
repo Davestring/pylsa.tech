@@ -28,7 +28,7 @@ function CCTVPage() {
           textAlign="center"
           isFluid
         >
-          <Heading as="h1" color="white" textTransform="uppercase">
+          <Heading as="h1" color="white" textTransform="uppercase" px={4}>
             {t('title')}
           </Heading>
         </Container>
@@ -37,7 +37,7 @@ function CCTVPage() {
             <Text fontSize="lg" textAlign="justify" mb={12}></Text>
           </Trans>
           <LogoAnimatedGrid
-            columns={4}
+            columns={{ base: 2, md: 4 }}
             spacing={8}
             logos={LOGOS}
           ></LogoAnimatedGrid>

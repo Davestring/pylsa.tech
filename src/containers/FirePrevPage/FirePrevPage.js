@@ -28,7 +28,7 @@ function FirePrevPage() {
           textAlign="center"
           isFluid
         >
-          <Heading as="h1" color="white" textTransform="uppercase">
+          <Heading as="h1" color="white" textTransform="uppercase" px={4}>
             {t('title')}
           </Heading>
         </Container>
@@ -37,7 +37,7 @@ function FirePrevPage() {
             <Text fontSize="lg" textAlign="justify" mb={12}></Text>
           </Trans>
           <LogoAnimatedGrid
-            columns={3}
+            columns={{ base: 2, md: 3 }}
             spacing={12}
             logos={LOGOS}
           ></LogoAnimatedGrid>
