@@ -7,7 +7,7 @@ import { css } from '@emotion/react';
 
 import FadeIn from 'components/animations/FadeIn';
 
-function LogoAnimatedGrid({ columns, logos, spacing, ...rest }) {
+function LogoAnimatedGrid({ columns, height, logos, spacing, ...rest }) {
   return (
     <SimpleGrid {...{ columns, spacing, ...rest }}>
       {logos.map(({ name, logo }, idx) => (
@@ -16,8 +16,8 @@ function LogoAnimatedGrid({ columns, logos, spacing, ...rest }) {
           alt={`${name}-logo`}
           src={logo}
           css={css`
-            animation: ${FadeIn} 1s backwards ${idx / logos.length / 0.25}s;
-            height: 3rem;
+            animation: ${FadeIn} 1s backwards ${idx / (logos.length + 1) / 0.3}s;
+            height: ${height} !important;
           `}
         ></Image>
       ))}
@@ -26,11 +26,13 @@ function LogoAnimatedGrid({ columns, logos, spacing, ...rest }) {
 }
 
 LogoAnimatedGrid.defaultProps = {
+  height: '3rem',
   logos: [],
 };
 
 LogoAnimatedGrid.propTypes = {
   columns: PropTypes.number,
+  height: PropTypes.string,
   logos: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string,
