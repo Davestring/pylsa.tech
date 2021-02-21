@@ -7,6 +7,8 @@ import { Box, Heading } from '@chakra-ui/react';
 
 import Container from 'components/elements/Container';
 
+import ContactForm from './components/ContactForm';
+
 function ContactPage() {
   const { t } = useTranslation('contact');
   return (
@@ -27,6 +29,11 @@ function ContactPage() {
           <Heading as="h1" color="white" textTransform="uppercase">
             {t('title')}
           </Heading>
+        </Container>
+        <Container as="section">
+          <ContactForm
+            maxWidth={{ base: '100%', md: '66%', lg: '50%' }}
+          ></ContactForm>
         </Container>
       </Box>
     </>
