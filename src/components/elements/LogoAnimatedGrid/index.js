@@ -16,7 +16,7 @@ function LogoAnimatedGrid({ columns, logos, spacing, ...rest }) {
           alt={`${name}-logo`}
           src={logo}
           css={css`
-            animation: ${FadeIn} 1s backwards ${idx / logos.length / 0.15}s;
+            animation: ${FadeIn} 1s backwards ${idx / logos.length / 0.25}s;
             height: 3rem;
           `}
         ></Image>
