@@ -2,6 +2,8 @@ import * as Yup from 'yup';
 
 import React from 'react';
 
+import { useDispatch } from 'react-redux';
+
 import { Box, Button, Flex, Icon, Stack, Text } from '@chakra-ui/react';
 import { Form, Formik } from 'formik';
 import { HiOutlineMail } from 'react-icons/hi';
@@ -14,6 +16,8 @@ import TextArea from 'components/inputs/TextArea';
 
 import { isAlphaNumeric, isEmail, isName, isPhone } from 'utils/yup-extentions';
 
+import { addSuccessToast } from 'containers/ToastManager/slice';
+
 const ContactFormSchema = Yup.object().shape({
   name: isName('name', { required: true }),
   paternal: isName('paternal', { required: true }),
@@ -24,6 +28,7 @@ const ContactFormSchema = Yup.object().shape({
 });
 
 function ContactForm({ ...rest }) {
+  const dispatch = useDispatch();
   const { t } = useTranslation('contact');
 
   return (
@@ -39,6 +44,11 @@ function ContactForm({ ...rest }) {
       validationSchema={ContactFormSchema}
       onSubmit={(values, actions) => {
         setTimeout(() => {
+          dispatch(
+            addSuccessToast(
+              'Hemos recibido tu solicitud, en breve nos pondremos en contacto contigo.',
+            ),
+          );
           actions.setSubmitting(false);
         }, 1000);
       }}
