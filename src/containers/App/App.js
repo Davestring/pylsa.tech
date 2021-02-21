@@ -19,7 +19,7 @@ const SOCIAL_MEDIA_ITEMS = [
   {
     name: 'whatsapp',
     icon: FaWhatsappSquare,
-    link: '#',
+    link: process.env.REACT_APP_WHATSAPP_LINK,
   },
 ];
 
