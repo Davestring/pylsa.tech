@@ -7,6 +7,9 @@ import { Box, Heading, Text } from '@chakra-ui/react';
 import { Trans, useTranslation } from 'react-i18next';
 
 import Container from 'components/elements/Container';
+import LogoAnimatedGrid from 'components/elements/LogoAnimatedGrid';
+
+import LOGOS from './logos';
 
 function IPSPage() {
   const { t } = useTranslation('ips');
@@ -31,8 +34,13 @@ function IPSPage() {
         </Container>
         <Container as="section">
           <Trans i18nKey="ips:description">
-            <Text fontSize="lg" textAlign="justify"></Text>
+            <Text fontSize="lg" textAlign="justify" mb={12}></Text>
           </Trans>
+          <LogoAnimatedGrid
+            columns={{ base: 2, md: 4 }}
+            spacing={8}
+            logos={LOGOS}
+          ></LogoAnimatedGrid>
         </Container>
       </Box>
     </>
