@@ -28,7 +28,7 @@ function IPSPage() {
           textAlign="center"
           isFluid
         >
-          <Heading as="h1" color="white" textTransform="uppercase">
+          <Heading as="h1" color="white" textTransform="uppercase" px={4}>
             {t('title')}
           </Heading>
         </Container>
@@ -38,8 +38,8 @@ function IPSPage() {
           </Trans>
           <LogoAnimatedGrid
             columns={{ base: 2, md: 4 }}
-            spacing={8}
             logos={LOGOS}
+            spacing={12}
           ></LogoAnimatedGrid>
         </Container>
       </Box>

@@ -38,8 +38,8 @@ function CCTVPage() {
           </Trans>
           <LogoAnimatedGrid
             columns={{ base: 2, md: 4 }}
-            spacing={8}
             logos={LOGOS}
+            spacing={12}
           ></LogoAnimatedGrid>
         </Container>
       </Box>

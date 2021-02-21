@@ -38,8 +38,8 @@ function FirePrevPage() {
           </Trans>
           <LogoAnimatedGrid
             columns={{ base: 2, md: 3 }}
-            spacing={12}
             logos={LOGOS}
+            spacing={12}
           ></LogoAnimatedGrid>
         </Container>
       </Box>

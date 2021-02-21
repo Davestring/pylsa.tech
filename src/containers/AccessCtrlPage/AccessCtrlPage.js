@@ -38,8 +38,8 @@ function AccessCtrlPage() {
           </Trans>
           <LogoAnimatedGrid
             columns={{ base: 2, md: 4 }}
-            spacing={12}
             logos={LOGOS}
+            spacing={12}
           ></LogoAnimatedGrid>
         </Container>
       </Box>
