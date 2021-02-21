@@ -32,7 +32,7 @@ function CCTVPage() {
             {t('title')}
           </Heading>
         </Container>
-        <Container as="section" mb={12}>
+        <Container as="section">
           <Trans i18nKey="cctv:description">
             <Text fontSize="lg" textAlign="justify" mb={12}></Text>
           </Trans>
