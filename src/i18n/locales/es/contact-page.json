@@ -3,5 +3,35 @@
     "title": "Pylsa: Contacto",
     "meta": ""
   },
-  "title": "contacto"
+  "title": "contacto",
+  "fields": {
+    "name": {
+      "error": "Ingresa un nombre válido",
+      "label": "Nombre(s)"
+    },
+    "paternal": {
+      "error": "Ingresa un apellido válido",
+      "label": "Apellido Paterno"
+    },
+    "maternal": {
+      "error": "Ingresa un apellido válido",
+      "label": "Apellido Materno"
+    },
+    "email": {
+      "error": "Ingresa un email válido",
+      "label": "Correo Electrónico"
+    },
+    "phone": {
+      "error": "Ingresa un numero de teléfono válido",
+      "label": "Teléfono"
+    },
+    "message": {
+      "error": "",
+      "label": "Mensaje",
+      "placeholder": "Escribe tu mensaje aqui..."
+    },
+    "optional": "Opcional...",
+    "required": "Este campo es obligatorio",
+    "send": "Enviar"
+  }
 }
