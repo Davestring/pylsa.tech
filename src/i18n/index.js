@@ -11,6 +11,7 @@ import cctv_es from 'i18n/locales/es/cctv-page.json';
 import contact_es from 'i18n/locales/es/contact-page.json';
 import fireprev_es from 'i18n/locales/es/fire-prev-page.json';
 import footer_es from 'i18n/locales/es/footer.json';
+import forms_es from 'i18n/locales/es/forms.json';
 import homepage_es from 'i18n/locales/es/home-page.json';
 import ips_es from 'i18n/locales/es/ips-page.json';
 import navigation_es from 'i18n/locales/es/navigation.json';
@@ -23,6 +24,7 @@ const translationsJson = {
     cctv: cctv_es,
     contact: contact_es,
     footer: footer_es,
+    forms: forms_es,
     homepage: homepage_es,
     fireprev: fireprev_es,
     ips: ips_es,

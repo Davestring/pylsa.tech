@@ -12,25 +12,19 @@ import Email from 'components/inputs/Email';
 import Input from 'components/inputs/Input';
 import TextArea from 'components/inputs/TextArea';
 
-import { NAMES_REGEX, PHONE_REGEX } from 'utils/yup-extentions';
+import { isAlphaNumeric, isEmail, isName, isPhone } from 'utils/yup-extentions';
+
+const ContactFormSchema = Yup.object().shape({
+  name: isName('name', { required: true }),
+  paternal: isName('paternal', { required: true }),
+  maternal: isName('maternal', { required: false }),
+  email: isEmail({ required: true }),
+  phone: isPhone({ required: false }),
+  text: isAlphaNumeric({ required: true }),
+});
 
 function ContactForm({ ...rest }) {
   const { t } = useTranslation('contact');
-
-  const ContactFormSchema = Yup.object().shape({
-    name: Yup.string()
-      .matches(NAMES_REGEX, t('fields.name.error'))
-      .required(t('fields.required')),
-    paternal: Yup.string()
-      .matches(NAMES_REGEX, t('fields.paternal.error'))
-      .required(t('fields.required')),
-    maternal: Yup.string().matches(NAMES_REGEX, t('fields.maternal.error')),
-    email: Yup.string()
-      .email(t('fields.email.error'))
-      .required(t('fields.required')),
-    phone: Yup.string().matches(PHONE_REGEX, t('fields.phone.error')),
-    text: Yup.string().required(t('fields.required')),
-  });
 
   return (
     <Formik
@@ -53,9 +47,8 @@ function ContactForm({ ...rest }) {
         <Box {...rest}>
           <Form>
             <Input
-              label="fields.name.label"
+              label="name.label"
               name="name"
-              ns="contact"
               size="sm"
               styles={{ bg: 'blue.50' }}
               {...{
@@ -64,37 +57,41 @@ function ContactForm({ ...rest }) {
                 w: { base: '100%', md: '50%' },
               }}
             ></Input>
+
             <Flex flexDir={{ base: 'column', md: 'row' }} mb={4}>
               <Input
-                label="fields.paternal.label"
-                mr={4}
+                label="paternal.label"
                 name="paternal"
-                ns="contact"
                 size="sm"
                 styles={{ bg: 'blue.50' }}
+                {...{
+                  mb: { base: 4, md: 0 },
+                  mr: 4,
+                }}
               ></Input>
               <Input
-                label="fields.maternal.label"
+                label="maternal.label"
                 name="maternal"
-                ns="contact"
-                placeholder="fields.optional"
+                placeholder="optional"
                 size="sm"
                 styles={{ bg: 'blue.50' }}
               ></Input>
             </Flex>
+
             <Flex flexDir={{ base: 'column', md: 'row' }} mb={4}>
               <Email
-                mr={4}
                 name="email"
-                ns="contact"
                 size="sm"
                 styles={{ bg: 'blue.50' }}
+                {...{
+                  mb: { base: 4, md: 0 },
+                  mr: 4,
+                }}
               ></Email>
               <Input
-                label="fields.phone.label"
+                label="phone.label"
                 name="phone"
-                ns="contact"
-                placeholder="fields.optional"
+                placeholder="optional"
                 size="sm"
                 styles={{ bg: 'blue.50' }}
               ></Input>
@@ -102,13 +99,12 @@ function ContactForm({ ...rest }) {
 
             <TextArea
               name="text"
-              ns="contact"
-              mb={4}
-              placeholder="fields.message.placeholder"
+              placeholder="message.placeholder"
               styles={{ bg: 'blue.50' }}
+              {...{ mb: 4 }}
             ></TextArea>
 
-            <Flex justify="flex-end" pl={{ base: 0, md: 4 }}>
+            <Flex justify="flex-end">
               <Button
                 colorScheme="facebook"
                 isDisabled={!isValid}
@@ -119,7 +115,7 @@ function ContactForm({ ...rest }) {
                 w={{ base: '100%', md: '50%', lg: '33%' }}
               >
                 <Stack isInline align="center" px={4}>
-                  <Text>{t('fields.send')}</Text>
+                  <Text>{t('send')}</Text>
                   <Icon as={HiOutlineMail} h={5} w={5}></Icon>
                 </Stack>
               </Button>

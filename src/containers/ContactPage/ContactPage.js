@@ -3,22 +3,12 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
 
-import {
-  Box,
-  Divider,
-  Flex,
-  Heading,
-  Icon,
-  Stack,
-  Text,
-} from '@chakra-ui/react';
-
-import { GrMail, GrMapLocation } from 'react-icons/gr';
-import { FaPhoneSquare } from 'react-icons/fa';
+import { Box, Flex, Heading } from '@chakra-ui/react';
 
 import Container from 'components/elements/Container';
 
 import ContactForm from './components/ContactForm';
+import OtherContact from './components/OtherContact';
 
 function ContactPage() {
   const { t } = useTranslation('contact');
@@ -44,39 +34,13 @@ function ContactPage() {
         <Container as="section">
           <Flex flexDir={{ base: 'column', md: 'row' }}>
             <ContactForm
-              width={{ base: '100%', md: '50%', lg: '66%' }}
-              mb={{ base: 4, md: 0 }}
-              mr={{ base: 0, md: 8 }}
+              {...{
+                mb: { base: 4, md: 0 },
+                mr: { base: 0, md: 8 },
+                w: { base: '100%', md: '66%' },
+              }}
             ></ContactForm>
-            <Box width={{ base: '100%', md: '50%', lg: '33%' }}>
-              <Text as="strong">Otras formas de contactarnos</Text>
-              <Text fontSize="xs" mb={4}>
-                Si no deseas utilizar el formulario de contacto o necesitas
-                enviar algo a PYLSA, puedes contactarnos de las siguentes
-                maneras.
-              </Text>
-              <Box bg="gray.50" fontSize="sm" p={4}>
-                <Stack isInline align="center" spacing={4}>
-                  <Icon as={GrMail} h={6} w={6}></Icon>
-                  <Text>contacto@pylsa.tech</Text>
-                </Stack>
-                <Divider my={4}></Divider>
-                <Stack isInline align="center" spacing={4}>
-                  <Icon as={FaPhoneSquare} h={6} w={6}></Icon>
-                  <Box>
-                    <Text>55-82-88-31-12</Text>
-                    <Text>55-82-88-31-29</Text>
-                  </Box>
-                </Stack>
-                <Divider my={4}></Divider>
-                <Stack isInline align="center" spacing={4}>
-                  <Icon as={GrMapLocation} h={6} w={6}></Icon>
-                  <Text>
-                    Aerolito #7 Chicoloapan de Juárez, Estado de México
-                  </Text>
-                </Stack>
-              </Box>
-            </Box>
+            <OtherContact w={{ base: '100%', md: '33%' }}></OtherContact>
           </Flex>
         </Container>
       </Box>
