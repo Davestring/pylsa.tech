@@ -9,6 +9,8 @@ import Header from 'components/modules/Header';
 
 import RouteTree from './RouteTree';
 
+import ScrollToTop from './ScrollToTop';
+
 const Wrapper = styled(Box)`
   background-color: ${({ theme }) => theme.colors.white};
   display: flex;
@@ -33,6 +35,7 @@ function App() {
       <Header></Header>
 
       <ISOContainer as="main">
+        <ScrollToTop></ScrollToTop>
         <RouteTree></RouteTree>
       </ISOContainer>
 
