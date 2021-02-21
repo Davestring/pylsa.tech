@@ -5,6 +5,8 @@ import { FaFacebookSquare, FaWhatsappSquare } from 'react-icons/fa';
 import Footer from 'components/modules/Footer';
 import Header from 'components/modules/Header';
 
+import ToastManager from 'containers/ToastManager';
+
 import ISOContainer from './components/ISOContainer';
 import RouteTree from './components/RouteTree';
 import ScrollToTop from './components/ScrollToTop';
@@ -35,6 +37,8 @@ function App() {
         </ISOContainer>
 
         <Footer smItems={SOCIAL_MEDIA_ITEMS}></Footer>
+
+        <ToastManager></ToastManager>
       </Wrapper>
     </>
   );
