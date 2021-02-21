@@ -12,18 +12,9 @@ import {
 import { useField } from 'formik';
 import { useTranslation } from 'react-i18next';
 
-function Input({
-  helper,
-  label,
-  name,
-  ns,
-  placeholder,
-  size,
-  styles,
-  ...rest
-}) {
+function Input({ helper, label, name, placeholder, size, styles, ...rest }) {
   const [field, meta] = useField(name);
-  const { t } = useTranslation(ns);
+  const { t } = useTranslation('forms');
   return (
     <FormControl name={name} isInvalid={meta.error && meta.touched} {...rest}>
       {label && <FormLabel fontSize={size}>{t(label)}</FormLabel>}
@@ -35,7 +26,7 @@ function Input({
         }}
       ></Textarea>
       {helper && <FormHelperText>{helper}</FormHelperText>}
-      <FormErrorMessage>{meta.error}</FormErrorMessage>
+      <FormErrorMessage>{t(meta.error)}</FormErrorMessage>
     </FormControl>
   );
 }
@@ -44,7 +35,6 @@ Input.defaultProps = {
   helper: '',
   label: '',
   name: '',
-  ns: '',
   placeholder: '',
   size: 'sm',
   styles: {},
@@ -54,7 +44,6 @@ Input.propTypes = {
   helper: PropTypes.string,
   label: PropTypes.string,
   name: PropTypes.string,
-  ns: PropTypes.string,
   placeholder: PropTypes.string,
   size: PropTypes.string,
   styles: PropTypes.shape({}),
