@@ -16,7 +16,7 @@ const SOCIAL_MEDIA_ITEMS = [
   {
     name: 'facebook',
     icon: FaFacebookSquare,
-    link: '#',
+    link: 'https://www.facebook.com/Pylsa-100491572097236',
   },
   {
     name: 'whatsapp',
