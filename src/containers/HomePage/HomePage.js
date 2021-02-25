@@ -42,7 +42,7 @@ function HomePage() {
         <title>{t('html.title')}</title>
         <meta name="description" content={t('html.meta')} />
       </Helmet>
-      <Box as="article">
+      <Box as="article" marginTop="-4rem">
         <Spotlight
           as="section"
           title={t('title')}

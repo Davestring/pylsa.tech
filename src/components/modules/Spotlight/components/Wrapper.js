@@ -8,7 +8,7 @@ const Wrapper = styled(Box)`
     ${({ theme }) => theme.colors.base} 0%,
     ${({ theme }) => theme.colors.dark} 100%
   );
-  height: ${({ height }) => `calc(${height}px - 4rem)`};
+  height: ${({ height }) => height}px;
   overflow: hidden;
   position: relative;
 `;

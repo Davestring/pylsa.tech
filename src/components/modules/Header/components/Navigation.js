@@ -13,7 +13,7 @@ import styled from '@emotion/styled';
 
 const ItemWrapper = styled(Flex)`
   align-items: center;
-  color: ${({ theme }) => theme.colors.base};
+  color: ${({ theme, color }) => theme.colors[color]};
   display: flex;
   height: 100%;
 
@@ -21,13 +21,19 @@ const ItemWrapper = styled(Flex)`
 
   &:hover {
     border-bottom-width: 2px;
-    border-color: ${({ theme }) => theme.colors.base};
+    border-color: ${({ theme, color }) => theme.colors[color]};
 
     transition: border-color 1s ease;
   }
 `;
 
-function Navigation({ selected, setSelected, routeTree, ...rest }) {
+function Navigation({
+  isTransparent,
+  selected,
+  setSelected,
+  routeTree,
+  ...rest
+}) {
   const { t } = useTranslation('navigation');
 
   return (
@@ -42,6 +48,7 @@ function Navigation({ selected, setSelected, routeTree, ...rest }) {
           <ItemWrapper
             borderBottom={selected === item.name && '2px'}
             fontWeight={selected === item.name && 'bold'}
+            color={isTransparent ? 'white' : 'base'}
             onClick={() => setSelected(item.name)}
           >
             <Text px={2}>{t(item.name)}</Text>
@@ -53,11 +60,13 @@ function Navigation({ selected, setSelected, routeTree, ...rest }) {
 }
 
 Navigation.defaultProps = {
+  isTransparent: false,
   setSelected: () => {},
   routeTree: [],
 };
 
 Navigation.propTypes = {
+  isTransparent: PropTypes.bool,
   selected: PropTypes.string,
   setSelected: PropTypes.func,
   routeTree: PropTypes.arrayOf(
