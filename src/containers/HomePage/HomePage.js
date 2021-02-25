@@ -5,8 +5,34 @@ import { Helmet } from 'react-helmet';
 
 import { useTranslation } from 'react-i18next';
 
+import { LgShadow, MdShadow, SmShadow } from 'components/elements/Shadows';
+
 import Products from 'containers/HomePage/components/Products';
-import Spotlight from 'containers/HomePage/components/Spotlight';
+import Spotlight from 'components/modules/Spotlight';
+
+const STARS_PROPS = [
+  {
+    id: 'sm',
+    height: '1px',
+    shadow: SmShadow,
+    speed: 50,
+    width: '1px',
+  },
+  {
+    id: 'md',
+    height: '2px',
+    shadow: MdShadow,
+    speed: 100,
+    width: '2px',
+  },
+  {
+    id: 'lg',
+    height: '3px',
+    shadow: LgShadow,
+    speed: 150,
+    width: '3px',
+  },
+];
 
 function HomePage() {
   const { t } = useTranslation('homepage');
@@ -17,7 +43,12 @@ function HomePage() {
         <meta name="description" content={t('html.meta')} />
       </Helmet>
       <Box as="article">
-        <Spotlight as="section"></Spotlight>
+        <Spotlight
+          as="section"
+          title={t('title')}
+          subtitle={t('subtitle')}
+          stars={STARS_PROPS}
+        ></Spotlight>
         <Products as="section"></Products>
       </Box>
     </>
