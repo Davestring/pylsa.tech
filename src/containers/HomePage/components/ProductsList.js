@@ -23,10 +23,10 @@ function ProductsList({ products, ...rest }) {
   return (
     <SimpleGrid columns={{ base: 1, sm: 1, md: 2, lg: 3 }} {...rest}>
       {products.map((item) => (
-        <Link key={`product-${item.id}`} as={ReachLink} to={item.link}>
-          <Card p={4}>
+        <Card key={`product-${item.id}`} p={4}>
+          <Link as={ReachLink} to={item.link}>
             <Stack align="center" justify="space-evenly" h="100%">
-              <Icon as={item.icon} h={14} w={14}></Icon>
+              <Icon as={item.icon} color={item.color} h={14} w={14}></Icon>
               <Box>
                 <Text fontWeight="bold" textAlign="center" mb={1}>
                   {t(`${item.i18nKey}.title`)}
@@ -36,8 +36,8 @@ function ProductsList({ products, ...rest }) {
                 </EllipsedText>
               </Box>
             </Stack>
-          </Card>
-        </Link>
+          </Link>
+        </Card>
       ))}
     </SimpleGrid>
   );
