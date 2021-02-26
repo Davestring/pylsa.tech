@@ -11,25 +11,22 @@ import { Trans, useTranslation } from 'react-i18next';
 import Container from 'components/elements/Container';
 import LogoAnimatedGrid from 'components/elements/LogoAnimatedGrid';
 
-import LOGOS from 'utils/logos';
+import PORTFOLIO_ITEMS from 'utils/portfolio-items';
 
-const portfolio = [
-  'accessControl',
-  'cctv',
-  'fireprev',
-  'ips',
-  'networks',
-  'rtc',
-];
+import _ from 'lodash';
 
 function PortfolioPage() {
   const { system } = useParams();
 
-  const isSystemInPortfolio = portfolio.includes(system);
+  const allowed = _.flow(
+    (obj) => _.omit(obj, 'grid'),
+    (obj) => _.keys(obj),
+    (arr) => _.includes(arr, system),
+  )(PORTFOLIO_ITEMS);
 
-  const { t } = useTranslation(isSystemInPortfolio ? system : 'homepage');
+  const { t } = useTranslation(allowed ? system : 'homepage');
 
-  if (!isSystemInPortfolio) return <Redirect to="/"></Redirect>;
+  if (!allowed) return <Redirect to="/"></Redirect>;
 
   return (
     <>
@@ -55,9 +52,8 @@ function PortfolioPage() {
             <Text fontSize="lg" textAlign="justify" mb={12}></Text>
           </Trans>
           <LogoAnimatedGrid
-            columns={{ base: 1, md: 2 }}
-            logos={LOGOS[system]}
-            spacing={12}
+            logos={PORTFOLIO_ITEMS[system]}
+            {...PORTFOLIO_ITEMS.grid[system]}
           ></LogoAnimatedGrid>
         </Container>
       </Box>

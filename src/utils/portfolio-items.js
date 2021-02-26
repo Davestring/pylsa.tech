@@ -28,7 +28,7 @@ import VivotekLogo from 'images/cctv/vivotek.png';
 import WeJoinLogo from 'images/access-control/wejoin.png';
 import ZKTecoLogo from 'images/access-control/zkteco.png';
 
-const LOGOS = {
+const PORTFOLIO_ITEMS = {
   accessControl: [
     {
       name: 'access-pro',
@@ -169,6 +169,14 @@ const LOGOS = {
       logo: PanasonicLogo,
     },
   ],
+  grid: {
+    accessControl: { columns: { base: 2, md: 4 }, spacing: 12 },
+    cctv: { columns: { base: 2, md: 4 }, spacing: 12 },
+    fireprev: { columns: { base: 2, md: 3 }, spacing: 12 },
+    ips: { columns: { base: 2, md: 4 }, spacing: 12 },
+    networks: { columns: { base: 2, md: 3 }, spacing: 12 },
+    rtc: { columns: { base: 1, md: 2 }, height: 'auto' },
+  },
 };
 
-export default LOGOS;
+export default PORTFOLIO_ITEMS;
