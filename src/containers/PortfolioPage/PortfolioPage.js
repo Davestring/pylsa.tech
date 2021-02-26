@@ -2,6 +2,8 @@ import React from 'react';
 
 import { Helmet } from 'react-helmet';
 
+import { Redirect, useParams } from 'react-router-dom';
+
 import { Box, Heading, Text } from '@chakra-ui/react';
 
 import { Trans, useTranslation } from 'react-i18next';
@@ -9,10 +11,23 @@ import { Trans, useTranslation } from 'react-i18next';
 import Container from 'components/elements/Container';
 import LogoAnimatedGrid from 'components/elements/LogoAnimatedGrid';
 
-import LOGOS from './logos';
+import PORTFOLIO_ITEMS from 'utils/portfolio-items';
 
-function NetworksPage() {
-  const { t } = useTranslation('networks');
+import _ from 'lodash';
+
+function PortfolioPage() {
+  const { system } = useParams();
+
+  const allowed = _.flow(
+    (obj) => _.omit(obj, 'grid'),
+    (obj) => _.keys(obj),
+    (arr) => _.includes(arr, system),
+  )(PORTFOLIO_ITEMS);
+
+  const { t } = useTranslation(allowed ? system : 'homepage');
+
+  if (!allowed) return <Redirect to="/"></Redirect>;
+
   return (
     <>
       <Helmet>
@@ -33,13 +48,12 @@ function NetworksPage() {
           </Heading>
         </Container>
         <Container as="section">
-          <Trans i18nKey="networks:description">
+          <Trans i18nKey={`${system}:description`}>
             <Text fontSize="lg" textAlign="justify" mb={12}></Text>
           </Trans>
           <LogoAnimatedGrid
-            columns={{ base: 2, md: 3 }}
-            logos={LOGOS}
-            spacing={12}
+            logos={PORTFOLIO_ITEMS[system]}
+            {...PORTFOLIO_ITEMS.grid[system]}
           ></LogoAnimatedGrid>
         </Container>
       </Box>
@@ -47,4 +61,4 @@ function NetworksPage() {
   );
 }
 
-export default NetworksPage;
+export default PortfolioPage;

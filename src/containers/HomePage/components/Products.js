@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Box, Text } from '@chakra-ui/react';
+
 import { GiCctvCamera, GiFireShield, GiSecurityGate } from 'react-icons/gi';
 import { AiOutlinePhone } from 'react-icons/ai';
 import { FaNetworkWired } from 'react-icons/fa';
@@ -18,42 +19,42 @@ const PRODUCTS = [
     id: 'access-control',
     i18nKey: 'products.accessControl',
     icon: MdLock,
-    link: '/access-ctrl-system',
+    link: '/portfolio/accessControl',
     color: 'yellow.500',
   },
   {
     id: 'cctv',
     i18nKey: 'products.cctv',
     icon: GiCctvCamera,
-    link: '/cctv-system',
+    link: '/portfolio/cctv',
     color: 'black',
   },
   {
     id: 'fire-prev',
     i18nKey: 'products.firePrev',
     icon: GiFireShield,
-    link: '/fire-prev-system',
+    link: '/portfolio/fireprev',
     color: 'red.500',
   },
   {
     id: 'intrusion',
     i18nKey: 'products.intrusion',
     icon: GiSecurityGate,
-    link: '/ips-system',
+    link: '/portfolio/ips',
     color: 'black',
   },
   {
     id: 'networks',
     i18nKey: 'products.networks',
     icon: FaNetworkWired,
-    link: '/networks-system',
+    link: '/portfolio/networks',
     color: 'blue.500',
   },
   {
     id: 'switches',
     i18nKey: 'products.switches',
     icon: AiOutlinePhone,
-    link: '/rtc-system',
+    link: '/portfolio/rtc',
     color: 'black',
   },
 ];

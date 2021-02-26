@@ -44,7 +44,7 @@ function Header({ ...rest }) {
     <Box
       as="header"
       bg={isTransparent ? 'transparent' : 'white'}
-      boxShadow="md"
+      boxShadow={!isTransparent && 'md'}
       position="fixed"
       transition="background-color 1s ease"
       width="100%"
