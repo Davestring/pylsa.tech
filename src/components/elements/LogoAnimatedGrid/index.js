@@ -26,12 +26,13 @@ function LogoAnimatedGrid({ columns, height, logos, spacing, ...rest }) {
 }
 
 LogoAnimatedGrid.defaultProps = {
+  columns: 0,
   height: '3rem',
   logos: [],
 };
 
 LogoAnimatedGrid.propTypes = {
-  columns: PropTypes.number,
+  columns: PropTypes.oneOfType([PropTypes.object, PropTypes.number]),
   height: PropTypes.string,
   logos: PropTypes.arrayOf(
     PropTypes.shape({
