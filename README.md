@@ -1,6 +1,6 @@
 # PYLSA: Technology, Security and Comfort
 
-Web application developed with [React.js](https://reactjs.org/) for [PYLSA]([https://pylsa.tech/](https://fraktalweb.com/)).
+Web application developed with [React.js](https://reactjs.org/) for [PYLSA](https://pylsa.tech/](https://fraktalweb.com/).
 
 See the [DEMO](http://pylsa-react-app.s3-website-us-west-1.amazonaws.com/)
 
