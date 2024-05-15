@@ -8,7 +8,7 @@
     "@emotion/styled": "^11.0.0",
     "@reduxjs/toolkit": "^1.5.0",
     "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
+    "@testing-library/react": "^15.0.4",
     "@testing-library/user-event": "^12.1.10",
     "connected-react-router": "^6.8.0",
     "fontfaceobserver": "^2.1.0",
